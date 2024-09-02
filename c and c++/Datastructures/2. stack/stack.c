@@ -11,18 +11,18 @@
 // 1. underflow <--- when stack is empty
 // 2. overflow <-- when stack is full
 #define MAX 10
-int stack[MAX];
+char stack[MAX];
 int top = -1;
 
 // 1. push
-void push(int element){
+void push(char element){
   
     if(top == MAX-1){
         printf("\nstack Overflow error, stack is full\n");
         return;
     }else{
         stack[++top] = element;
-        printf("\n%d has been added to the top of the stack\n",element);
+        printf("\n%c has been added to the top of the stack\n",element);
     }
 }
 // 2. pop
@@ -33,7 +33,7 @@ int pop(){
     }else{
         int popped = stack[top];
         stack[top--] = -1;
-        printf("\n%d is popped\n",popped);
+        printf("\n%c is popped\n",popped);
         return popped;
     }
 }
@@ -52,7 +52,7 @@ void display(){
     }else{
         printf("\nstack elements:\n");
         for(int i =0; i<=top;i++){
-            printf("%d ",stack[i]);
+            printf("%c ",stack[i]);
         }
     }
 }
@@ -66,11 +66,11 @@ int isFull(){
     return top == MAX -1;
 }
 
-int main(){
-    printf("\nStack implementation\n");
-    push(10);
-    push(20);
-    push(30);
-    push(40);
+// int main(){
+//     printf("\nStack implementation\n");
+//     push(10);
+//     push(20);
+//     push(30);
+//     push(40);
 
-}
+// }
