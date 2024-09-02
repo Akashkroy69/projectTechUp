@@ -27,7 +27,7 @@ void infixToPostfix(char infix[], char postfix[])
     while (infix[i] != '\0')
     {
          ch = infix[i++];
-        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9'))
         {
             postfix[j++] = ch;
         }
@@ -66,8 +66,10 @@ void infixToPostfix(char infix[], char postfix[])
 
 int main()
 {
-    char infixExpression[] = "(A+B)-C+D*C";
-    char postfixOutExpression[100];
+    // char infixExpression[] = "(A+B)-C+D*C";
+    char infixExpression[] = "5*2+(16/2^3-3*2)+14/7";
+
+    char postfixOutExpression[100]="";
 
     int size = sizeof(infixExpression) / sizeof(infixExpression[0]);
 
