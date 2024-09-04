@@ -6,7 +6,7 @@
 // 3. display
 // 4. isEmpty
 // 5. isFull
-// 6. peek: to pick the top element from the stack
+// 6. peek: to see the top element from the stack(here we don't pop the element from the stack, we just see the element on the top)
 // TERMS:
 // 1. underflow <--- when stack is empty
 // 2. overflow <-- when stack is full
