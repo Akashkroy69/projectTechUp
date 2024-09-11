@@ -1,5 +1,5 @@
 #include <stdio.h>
-// #include "srack.c"
+#include "stack.c"
 
 int postfixEvaluation(char *postfixExp){
     int i =0;
