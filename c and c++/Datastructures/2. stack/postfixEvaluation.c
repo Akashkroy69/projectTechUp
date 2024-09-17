@@ -24,12 +24,12 @@ int postfixEvaluation(char *postfixExp){
     return pop();
 }
 
-int main(){
-    // 2+3*4 -----> 2,3,4*+
-    char postfix[] = '2+3*4';
-    int value = postfixEvaluation(postfix);
-    printf("the value of the postfix evaluation: %d",value);
+// int main(){
+//     // 2+3*4 -----> 2,3,4*+
+//     char postfix[] = '2+3*4';
+//     int value = postfixEvaluation(postfix);
+//     printf("the value of the postfix evaluation: %d",value);
 
-    return 0;
+//     return 0;
 
-}
+// }
