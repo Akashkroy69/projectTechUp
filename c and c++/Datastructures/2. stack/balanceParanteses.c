@@ -6,10 +6,7 @@ void isParathesisBalanced(char arr[],int size){
     int i =0; 
     while (i < size)
     {
-        if (arr[i]>='A' && arr[i]<='Z' || arr[i]>='a' && arr[i]<='z')
-        {
-            // printf("\na character\n");
-        }else if (arr[i]=='(')
+        if (arr[i]=='(')
         {
            push('(');
         }else if (arr[i] == ')')
