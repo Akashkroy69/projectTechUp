@@ -5,7 +5,6 @@
 int queue[SIZE];
 int front = -1;
 int rear = -1;
-
 // isFull
 int isFull(){
     if (rear == SIZE-1)
@@ -81,16 +80,11 @@ int main() {
     enqueue(30);
     enqueue(40);
     enqueue(50);
-
     display();
-
     dequeue();
     dequeue();
-
     display();
-
     enqueue(60);
     display();
-
     return 0;
 }
