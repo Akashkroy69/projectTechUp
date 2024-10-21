@@ -48,7 +48,7 @@ int postfixEvaluation(char *postfixExp){
 
 int main(){
 //     // 2+3*4 -----> 2,3,4*+
-    char postfix[] = "324+*2+";
+    char postfix[] = "231*+9-";
     int value = postfixEvaluation(postfix);
     printf("the value of the postfix evaluation: %d",value);
 

@@ -30,7 +30,7 @@ void enqueue(int element){
     if(isFull()){
         printf("the queue is full");
     }else{
-        if (rear == -1)
+        if (front == -1 && rear == -1)
         {
             front = 0;
         }
