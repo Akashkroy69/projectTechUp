@@ -101,6 +101,26 @@ void printAll(struct Node* head){
 
 }
 
+void freeResources(struct Node** head){
+    struct Node *temp = *head;
+    if (temp == NULL)
+    {
+        printf("\nthe linked list is empty\n");
+    }else{
+        while (temp != NULL)
+        {
+            struct Node *currentNode = temp;
+            temp = temp->next;
+            free(currentNode);
+        }
+
+        printf("\nxxxxxxxx----All clear----xxxxxxxx\n");
+        *head = NULL;
+        return;
+    }
+    
+}
+
 int main(){
 
 // insertion of 10 in the LL
@@ -117,5 +137,9 @@ int main(){
     deleteNode(&head,50);
     printf("\n========\n");
     printAll(head);
+
+    freeResources(&head);
+    printAll(head);
+
 
 }
