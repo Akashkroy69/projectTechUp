@@ -6,6 +6,7 @@ struct Node{
     struct Node* next; //self referencing poniter
 };
 
+// insertion at beginning
 void insertAtStart(struct Node** head,int data){
 
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));   //understand more on this
@@ -19,6 +20,7 @@ void insertAtStart(struct Node** head,int data){
     printf("Inserted %d at the beginning.\n", data);
 }
 
+// insertions at end
 void inserAtEnd(struct Node* head,int data){
     
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));   //understand more on this
@@ -46,10 +48,33 @@ void inserAtEnd(struct Node* head,int data){
 
 void deleteNode(struct Node** head,int data){
 
-
+    if(*head == NULL){
+        printf("\nLinked list is empty\n");
+        
+    }
+    
+        struct Node* temp = *head;
+        if (temp->data == data)
+        {
+            *head = temp->next;
+            free(temp);
+            return;
+        }else{
+            struct Node* prev;
+            while (temp->data != data)
+            {
+                prev = temp;
+                temp = temp->next;
+                if(temp == NULL) return;
+            }
+            prev->next = temp->next;
+            free(temp);
+            return;
+        }
 }
 
 
+// displaying elements
 void printAll(struct Node* head){
     if (head ==NULL)
     {
@@ -80,6 +105,10 @@ int main(){
 
     inserAtEnd(head,50);
 
+    printAll(head);
+
+    deleteNode(&head,50);
+    printf("\n========\n");
     printAll(head);
 
 }
