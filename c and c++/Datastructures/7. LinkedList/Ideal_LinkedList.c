@@ -46,10 +46,12 @@ void inserAtEnd(struct Node* head,int data){
     printf("Inserted %d at the end.\n", data);
 }
 
+// deletion by number
 void deleteNode(struct Node** head,int data){
 
     if(*head == NULL){
         printf("\nLinked list is empty\n");
+        return;
         
     }
     
@@ -58,6 +60,7 @@ void deleteNode(struct Node** head,int data){
         {
             *head = temp->next;
             free(temp);
+            printf("Deleted node with value %d.\n", data);
             return;
         }else{
             struct Node* prev;
@@ -65,10 +68,14 @@ void deleteNode(struct Node** head,int data){
             {
                 prev = temp;
                 temp = temp->next;
-                if(temp == NULL) return;
+                if(temp == NULL){
+                    printf("%d is not found in the linked list.",data);    
+                    return;
+                }
             }
             prev->next = temp->next;
             free(temp);
+            printf("Deleted node with value %d.\n", data);
             return;
         }
 }
