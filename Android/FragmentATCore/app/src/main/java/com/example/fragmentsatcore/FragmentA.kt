@@ -1,12 +1,29 @@
 package com.example.fragmentsatcore
 
+import android.content.Context
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 class FragmentA : Fragment() {
 
-    fun onAttach(){} //(called before onCreate() of Fragment)
-    fun onCreate(){}
-    fun onCreateView(){}  // (this is where the fragment inflates its layout)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+    } //(called before onCreate() of Fragment)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {    // (this is where the fragment inflates its layout)
+
+       val view = inflater.inflate(R.layout.layout_fragment_a, container,false)
+        return view
+    }
     fun onActivityCreated(){} //(called once the activity's onCreate() method has completed)
     override fun onStart(){
         super.onStart()
