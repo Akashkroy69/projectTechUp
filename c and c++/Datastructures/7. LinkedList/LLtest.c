@@ -31,6 +31,25 @@ void insertAtBeg(struct Node  **head, int data){
     *head = newNode;
 }
 
+void insertAtEnd(struct Node **head, int data){
+    struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+     if(newNode == NULL){
+        printf("\nmemory allocation failed\n");
+        return;
+    }
+
+    newNode->data = data;
+    newNode->next = NULL;
+
+    // for adding in end
+    struct Node *temp = *head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
 void display(struct Node *head){
     if (head == NULL)
     {
@@ -56,12 +75,15 @@ int main(){
     insertAtBeg(&head,20); 
     display(head);
     printf("\n*****\n");
-      insertAtBeg(&head,30); 
+    insertAtBeg(&head,30); 
     display(head);
     printf("\n*****\n");
     insertAtBeg(&head,40); 
     display(head);
     printf("\n*****\n");
+    insertAtEnd(&head,50);
+    insertAtEnd(&head,60);
+    display(head);
 
 
 
