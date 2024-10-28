@@ -11,7 +11,7 @@ void insertAtStart(struct Node** head,int data){
 
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));   //understand more on this
     if(newNode == NULL){
-        printf("\nNode creation failed\n");
+        printf("\nNode creation failed, unexpected error\n");
         return;
     }
     newNode->data = data;

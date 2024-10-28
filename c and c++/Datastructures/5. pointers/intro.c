@@ -19,14 +19,10 @@ int main(){
     printf(" \nvalue of num(using pointer) : %d \n",*poninter); //Dereferencing a Pointer (*)
 // Dereferencing is the process of accessing the value stored at the memory address a pointer holds. 
 // The * operator is used to dereference.
-    printf(" \naddress of num : %d \n",poninter);
+    printf(" \naddress of num : %p \n",poninter);
 
 // Null Pointers
 // A null pointer is one that doesn’t point to any valid memory location.
 int *nullPointer = NULL;
 printf(" \naddress of nullpointer : %d \n",nullPointer);
-
-
-
-
 }

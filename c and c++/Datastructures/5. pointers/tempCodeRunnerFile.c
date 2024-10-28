@@ -1,0 +1,1 @@
+  printf(" \naddress of num : %d \n",poninter);
