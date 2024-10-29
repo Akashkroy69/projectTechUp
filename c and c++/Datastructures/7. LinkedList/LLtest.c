@@ -31,6 +31,7 @@ void insertAtBeg(struct Node  **head, int data){
     *head = newNode;
 }
 
+// at end
 void insertAtEnd(struct Node **head, int data){
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
      if(newNode == NULL){
@@ -49,7 +50,69 @@ void insertAtEnd(struct Node **head, int data){
     }
     temp->next = newNode;
 }
+// at a specific position
+void insertAt_A_Position(struct Node **head, int data, int position){
 
+    struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+     if(newNode == NULL){
+        printf("\nmemory allocation failed\n");
+        return;
+    }
+
+    newNode->data = data;
+    newNode->next = NULL;
+
+    if(position == 1){
+        insertAtBeg(head,data);
+        return;
+    }
+
+    struct Node *currentNode = *head;
+    for(int i =1;(i<=position-2) && (currentNode != NULL);i++){
+        currentNode = currentNode->next;
+    }
+    if (currentNode == NULL)
+    {
+        printf("\nthere is no such position\n");
+        free(newNode);
+        return;
+    }
+
+    newNode->next = currentNode->next;
+    currentNode->next = newNode;
+}
+// delete: delete from begining
+void deleteFromBeginning(struct Node** head){
+
+    if(head == NULL){
+        printf("\nThe linked list is already empty.\n-------\n");
+        return;
+    }
+    struct Node *temp = *head;
+    *head = temp->next;
+    free(temp);
+
+}
+
+void deleteFromEnd(struct Node** head){
+
+    if(head == NULL){
+        printf("\nThe linked list is already empty.\n-------\n");
+        return;
+    }
+    struct Node* temp = *head;
+    struct Node* prev = NULL;
+    while(temp->next != NULL){
+        prev = temp;
+        temp = temp->next;
+    }
+
+    prev->next = NULL;
+
+    free(temp);
+}
+
+// display
 void display(struct Node *head){
     if (head == NULL)
     {
@@ -84,6 +147,23 @@ int main(){
     insertAtEnd(&head,50);
     insertAtEnd(&head,60);
     display(head);
+    printf("\n*****\n");
+    insertAt_A_Position(&head,111,1);
+    display(head);
+    printf("\n*****\n");
+    insertAt_A_Position(&head,15,2);
+    display(head);
+    printf("\n*****\n");
+
+    deleteFromBeginning(&head);
+    display(head);
+    printf("\n*****\n");
+    deleteFromBeginning(&head);
+    display(head);
+    printf("\n*****\n");
+    deleteFromEnd(&head);
+    display(head);
+    printf("\n*****\n");
 
 
 
