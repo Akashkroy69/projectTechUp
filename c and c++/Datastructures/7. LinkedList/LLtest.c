@@ -93,7 +93,7 @@ void deleteFromBeginning(struct Node** head){
     free(temp);
 
 }
-
+// deletion at end
 void deleteFromEnd(struct Node** head){
 
     if(head == NULL){
@@ -110,6 +110,39 @@ void deleteFromEnd(struct Node** head){
     prev->next = NULL;
 
     free(temp);
+}
+// deletion at a position
+void deletionAt_A_Position(struct Node **head,int position){
+    if (*head == NULL)
+    {
+        printf("\nLinked list is alreday empty\n");
+        return;
+    }
+
+    if (position == 1)
+    {
+        deleteFromBeginning(head);
+        return;
+    }
+    struct Node* currentNode = *head;
+    for(int i = 1; i<=position-2 && currentNode != NULL; i++ ){
+        currentNode = currentNode->next;
+    }
+
+    if (currentNode == NULL || currentNode->next == NULL)
+    {
+        printf("\nthere is no node at position %d\n",position);
+        return;
+    }else{
+         struct Node *temp = currentNode->next;
+         currentNode->next = temp->next;
+         free(temp);
+         return;
+    }
+    
+
+    
+    
 }
 
 // display
@@ -162,6 +195,12 @@ int main(){
     display(head);
     printf("\n*****\n");
     deleteFromEnd(&head);
+    display(head);
+    printf("\n*****\n");
+    deletionAt_A_Position(&head,1);
+    display(head);
+    printf("\n*****\n");
+    deletionAt_A_Position(&head,3);
     display(head);
     printf("\n*****\n");
 
