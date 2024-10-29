@@ -145,6 +145,20 @@ void deletionAt_A_Position(struct Node **head,int position){
     
 }
 
+void display_(struct Node *head){
+    if(head == NULL){
+        printf("\nthe linked list is empty\n");
+    }
+    struct Node* temp = head;
+    while (temp->next != NULL)
+    {
+        printf("\nhead contains a node, and address for: %p, \bthe data: %d, \nnext node address: %p\n",temp,temp->data,temp->next);
+        printf("\n------\n");
+        temp = temp->next;
+    }
+    
+}
+
 // display
 void display(struct Node *head){
     if (head == NULL)
@@ -201,6 +215,8 @@ int main(){
     display(head);
     printf("\n*****\n");
     deletionAt_A_Position(&head,3);
+    display(head);
+    printf("\n*****\n");
     display(head);
     printf("\n*****\n");
 
