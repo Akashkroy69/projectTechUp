@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/1185818338_3985064423_1525329545.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_1839128356_59777278.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_498287973_3770907835.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_1199148443_3156008395.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_1839128356_3838259106.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_3554121878_1664218759.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_1839128356_1540352298.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_3799442909_432205657.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_2408024828_2280630675.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_989494668_192819939.mp4'
+file 'file:C:/Users/Lenovo/OneDrive/Desktop/TechUp/manim/OS_module1/About Operating system/media/videos/whatisos/480p15/partial_movie_files/OSAsMiddleman/624642324_1839128356_3196764103.mp4'
