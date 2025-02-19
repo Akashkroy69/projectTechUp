@@ -11,8 +11,9 @@ data = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]]) #ex 3
 # where the individual values that are contained in a matrix are represented as colors.
 
 # sns.heatmap(data) #simplest way
-sns.heatmap(data, annot=True,fmt=".2f") #with annotation
+sns.heatmap(data, annot=True,fmt=".2f",cmap="plasma") #with annotation
 # fmt: d, f, .2f, .3f, .4f, .5f, .6f, .7f, .8f, .9f, .10f
+# cmap: viridis,plasma, inferno, magma, cividis,coolwarm
 plt.show()
 # The simplest way to create a heatmap is by using Seaborn with a 2D array of numbers.
 # Explanation:

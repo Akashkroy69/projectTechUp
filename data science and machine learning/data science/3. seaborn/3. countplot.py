@@ -7,7 +7,7 @@ print(titanic.head())
 # Count Plot
 # Used to visualize the count of a categorical variable.
 sns.countplot(x="sex", data=titanic, hue="class", palette="viridis",edgecolor="black",width=0.6,linewidth=2)
-plt.show(  )
+plt.show()
 
 
 # Note:
