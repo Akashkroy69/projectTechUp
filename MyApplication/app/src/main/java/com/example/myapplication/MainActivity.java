@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         for (Student stu : list) {
             System.out.println("hello");
             System.out.println(stu.name + " - " + stu.age);
+            //or ma'am, you can create a textview and set the text to the name and age of the student
 
 
         }
