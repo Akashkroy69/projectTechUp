@@ -2,6 +2,9 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+
 import androidx.room.Room;
 import java.util.List;
 
@@ -12,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         db = Room.databaseBuilder(getApplicationContext(),
                         AppDatabase.class, "student-db")
-                .allowMainThreadQueries()
+                .allowMainThreadQueries()  // Explain: "Not recommended for real apps, okay for demo"
                 .build();
 
 
@@ -30,9 +34,17 @@ public class MainActivity extends AppCompatActivity {
         for (Student stu : list) {
             System.out.println("hello");
             System.out.println(stu.name + " - " + stu.age);
-            //or ma'am, you can create a textview and set the text to the name and age of the student
-
+            Log.d("hello", stu.name + " - " + stu.age);
 
         }
+
+        TextView resultText = findViewById(R.id.resultTextView);
+        StringBuilder builder = new StringBuilder();
+        for (Student s1 : list) {
+            builder.append("ID: ").append(s1.id)
+                    .append(" Name: ").append(s1.name)
+                    .append(" Age: ").append(s1.age).append("\n");
+        }
+        resultText.setText(builder.toString());
     }
 }
