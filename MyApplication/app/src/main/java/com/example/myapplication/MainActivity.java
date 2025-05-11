@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
         db = Room.databaseBuilder(getApplicationContext(),
                         AppDatabase.class, "student-db")
-                .allowMainThreadQueries()  // Explain: "Not recommended for real apps, okay for demo"
+                .allowMainThreadQueries()
                 .build();
+
 
         // Inserts student
         Student s = new Student();
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         // Reads all students
         List<Student> list = db.studentDao().getAllStudents();
         for (Student stu : list) {
+            System.out.println("hello");
             System.out.println(stu.name + " - " + stu.age);
+
+
         }
     }
 }
